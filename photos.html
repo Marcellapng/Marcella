@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>photos</title>
+</head>
+
+<header>
+    <h1 class="navigation__logo"><a href="index.html" class="link">george marcella</a></h1>
+</header>
+
+<body>
+<div class="canvas">
+    <div class="navigation">
+        <!-- <h1 class="navigation__logo"><a href="index.html" class="link">george marcella</a></h1> -->
+        <nav class="navigation__menu">
+            <ul>
+                <li class="menu__li"><a href="films.html" class="link">films</a></li>
+                <li class="menu__li"><a href="photos.html" class="link">photos</a></li>
+                <li class="menu__li"><a href="book.html" class="link">book</a></li>
+                <li class="menu__li"><a href="shop.html" class="link">shop</a></li>
+                <li class="menu__li"><a href="about.html" class="link">about</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="slider">
+            <img src="./img/katebefore.png" alt="Ekaterina Nemolyaeva" class="photo">
+            <img src="./img/time.png" alt="Still from the cinema" class="photo">
+            <img src="./img/kateafter.jpg" alt="Ekaterina Nemolyaeva" class="photo">
+
+            <!-- TODO: "Элемент <br> имеет единственную цель – создать разрыв линии в блоке текста" - MDN
+            здесь он не к месту, а лучше его вообще не использовать без особой надобности
+            тоже самое касается тега <hr> - он нужен только для разделения параграфов в тексте -->
+            </br>
+
+            <!-- TODO: не уверен, что это хорошая идея:
+            1. ссылка должна оставаться ссылкой, а кнопка - кнопкой. Семантически правильно оставить стили только соответствующие тегу
+            2. как БЭМ микс это выглядит странно - обычно два блока на одном узле не миксуют -->
+            <a class="link button" onclick="previousSlide()">Back</a>
+            <a class="link button" onclick="nextSlide()">Next</a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

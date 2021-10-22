@@ -1,0 +1,126 @@
+/* TODO: для улучшения читаемости можно использовать SCSS
+наглядная вещь и с БЭМ сочетается отлично */
+
+@font-face {
+    font-family: "Bicyclette";
+}
+
+/* TODO: в проектах побольше так лучше не делать */
+body {
+    font-family: Bicyclette;
+    font-weight: normal;
+    background-color: #facf7a;
+    color: red;
+}
+
+.canvas {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+}
+
+/* TODO: старайся не оставлять пустые файлы и сущности в проекте
+если это напоминание самому себе, пиши "// TODO:" */
+.navigation {
+
+}
+
+.navigation__logo {
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 43px;
+    padding-top: 26px;
+}
+
+.navigation__menu {
+    font-size: 16px;
+    line-height: 1.3;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+/* TODO: не всегда элементами меню могут быть <li>
+я бы назвал .menu__item */
+.menu__li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.photo {
+    width: 654px;
+    height: 443px;
+    display: block;
+
+    /* TODO: паддинг тут не нужен, смотри изменения в файле photos.html (с 9й строчки) */
+    padding-top: 10%;
+
+    /* TODO: в блоках по БЭМ не должно быть внешней геометрии
+    margin - это внешний отступ, влияющий на размер
+    если ты захочешь использовать этот блок в другом месте, могут возникнуть трудности с его размещением */
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.link {
+    /* TODO: добавь сюда эту строчку, посмотри, что получится */
+    /* cursor: pointer; */
+    text-decoration: none;
+    color: red;
+}
+
+.link:hover {
+    color: rgb(89, 112, 12);
+    transition: color .2s;
+}
+
+
+/* TODO: обрати внимание на нейминг - где-то film / где-то cinema 
+похоже на придирку, но когда проект разрастается, css классы и компоненты с разными названиями
+воспринимаются как разные сущности
+даже если под ними подразумеваются одно и тоже, как здесь: */
+
+/*Film*/
+
+.cinema {
+    /* padding: 100px; */
+}
+
+.cinema__frame {
+    width: 700px;
+    height: 405px;
+    /*border: solid 5px red;*/
+    background-color: black;
+    display: block;
+
+    /* TODO: у тебя ведь не настроен линтер, так?
+    два свойства подряд описывают одно и тоже 
+    И еще - ты спокойно можешь вывести это в блок в виде padding: 100px
+    таким образом ты не нарушишь БЭМ и тебе не придется каждому элементу писать отступы*/
+    margin: 100px auto;
+    margin-bottom: 1.5em;
+}
+
+/* TODO: description ? */
+.cinema__dicription {
+    width: 685px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+/*Photo*/
+.slider {
+    text-align: center;
+}
+
+.photo {
+    display: none;
+}
+
+.button {
+    margin: 0 8px;
+}
