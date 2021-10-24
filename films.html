@@ -2,60 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>films</title>
 </head>
+
+<header>
+    <h1 class="logo"><a href="index.html" class="link">george marcella</a></h1>
+</header>
+
 <body>
 <div class="canvas">
-    <div class="navigation">
-        <h1 class="navigation__logo"><a href="index.html" class="link">george marcella</a></h1>
-        <nav class="navigation__menu">
-            <ul>
-                <li class="menu__li"><a href="films.html" class="link">films</a></li>
-                <li class="menu__li"><a href="photos.html" class="link">photos</a></li>
-                <li class="menu__li"><a href="book.html" class="link">book</a></li>
-                <li class="menu__li"><a href="shop.html" class="link">shop</a></li>
-                <li class="menu__li"><a href="about.html" class="link">about</a></li>
-            </ul>
-        </nav>
-    </div>
-
-<!--    HTML: видео, iframe, embed, API. Введение-->
+    <nav class="navigation__menu">
+        <ul>
+            <li class="menu__item"><a href="films.html" class="link">films</a></li>
+            <li class="menu__item"><a href="photos.html" class="link">photos</a></li>
+            <li class="menu__item"><a href="book.html" class="link">book</a></li>
+            <li class="menu__item"><a href="shop.html" class="link">shop</a></li>
+            <li class="menu__item"><a href="about.html" class="link">about</a></li>
+        </ul>
+    </nav>
 
     <div class="content">
-        <div class="cinema">
-            <div class="cinema__frame">
-
-
-                <!-- TODO: читаемость -->
+                <!--forest jazz-->
                 <iframe
-                    src="https://player.vimeo.com/video/137598990?h=f56a0fbf86?"
-                    width="700"
-                    height="405"
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
+                        class="frame_item"
+                        src="https://player.vimeo.com/video/137598990?h=f56a0fbf86?"
+                        width="700"
+                        height="405"
+                        frameborder="0"
+                        allow="autoplay;
+                               fullscreen;
+                               picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A accusantium aspernatur consequuntur impedit molestiae necessitatibus neque quidem repellendus,
+                repudiandae voluptate. Accusamus adipisci dignissimos eum officia quaerat quisquam tempora?
+                Inventore iste nihil pariatur possimus quod sequi tenetur vero voluptatem!
+                Accusantium asperiores esse et ex quos, sapiente sit? Atque autem culpa cum cupiditate,
+                delectus deserunt, dignissimos dolores dolorum eaque error et harum iste itaque laborum
+                necessitatibus non odio quam, sequi totam unde ut vel voluptatibus. Dolores enim itaque
+                nulla quaerat sapiente ut.</p>
 
-            <p class="cinema__dicription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <!--stalker-->
+                <iframe
+                        class="frame_item"
+                        src="https://player.vimeo.com/video/349950585?h=c6f52567bf"
+                        width="700"
+                        height="405"
+                        frameborder="0"
+                        allow="autoplay;
+                               fullscreen;
+                               picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid aperiam distinctio eum ex optio ratione sit ullam velit veritatis! Animi asperiores
+                consequatur consequuntur culpa cumque explicabo laudantium odio repudiandae unde voluptates.
+                Cupiditate expedita labore laboriosam vel? A animi aperiam cumque cupiditate dolor, dolorem
+                dolores error, est eum ex fuga fugit harum hic libero magni minus modi nam neque nihil numquam
+                perferendis provident quasi saepe similique vero voluptatem voluptatum? Accusamus aut dignissimos
+                doloremque eligendi enim laboriosam, laborum libero, magnam maxime, numquam quia repudiandae
+                sapiente voluptates? Aspernatur impedit ipsa labore magnam mollitia nisi nulla quam quas ratione
+                veniam. Dolorem esse facilis laboriosam mollitia officia optio quae, quaerat ullam ut voluptates.
+                Expedita, incidunt?</p>
 
-            <div class="cinema__frame">
-                <iframe src="https://player.vimeo.com/video/349950585?h=c6f52567bf" width="700" height="405" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="cinema__dicription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-            <div class="cinema__frame">
-                <iframe src="https://player.vimeo.com/video/228243428?h=9c061786a2&color=fff406&title=0&byline=0&portrait=0" width="700" height="405" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="cinema__dicription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-            <div class="cinema__frame">
-                <iframe width="700" height="405" src="https://www.youtube.com/embed/tbtquEqDoFk?color=white&autoplay=0&controls=1&rel=0&showinfo=0" title="trailer courier, 1987" frameborder="0" allow="showinfo; color; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" color="white" allowfullscreen></iframe>
-            </div>
-            <p class="cinema__dicription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <!--courier-->
+                <iframe
+                        class="frame_item"
+                        width="700"
+                        height="405"
+                        src="https://www.youtube.com/embed/tbtquEqDoFk?color=white&autoplay=0&controls=1&rel=0&showinfo=0"
+                        title="trailer courier, 1987"
+                        frameborder="0"
+                        allow="showinfo;
+                               color;
+                               accelerometer;
+                               autoplay;
+                               clipboard-write;
+                               encrypted-media;
+                               gyroscope;
+                               picture-in-picture"
+                        color="white"
+                        allowfullscreen>
+                </iframe>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus ad asperiores, fugiat in incidunt quae quidem quisquam ratione repellat repudiandae
+                sapiente temporibus velit? Ad autem beatae iste nam provident quia repellat repudiandae sit?
+                Ab architecto beatae consequatur deleniti deserunt dolor dolore dolores ducimus eligendi, eos
+                est ex fuga id iusto laboriosam magnam, magni minima necessitatibus nesciunt nostrum numquam
+                provident quia, quod tempora tempore velit voluptate! Aliquid consectetur et rerum? Amet optio
+                quam quasi! Commodi cupiditate deserunt dicta enim ex iste labore laboriosam maxime nemo repellat.
+                Consequuntur, facere obcaecati! Distinctio itaque magni, molestiae molestias necessitatibus nemo
+                nesciunt qui tempore vel voluptate?</p>
         </div>
-    </div>
 </div>
 </body>
 </html>

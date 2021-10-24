@@ -2,33 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>george marcella</title>
 </head>
+
+<header>
+    <h1 class="logo"><a href="index.html" class="link">george marcella</a></h1>
+</header>
+
 <body>
 <div class="canvas">
-    <!-- TODO: это меню повторяется на каждой странице
-    как я понимаю - сделано так намерено, для github.io ?
-    чтобы сократить код/улучшить читаемость можно использовать, например, pug
-    чекни здесь: 
-    https://youtu.be/eLTgLxQV7P4?t=491 -->
-
-    <div class="navigation">
-        <h1 class="navigation__logo"><a href="index.html" class="link">george marcella</a></h1>
-        <nav class="navigation__menu">
-            <ul>
-                <li class="menu__li"><a href="films.html" class="link">films</a></li>
-                <li class="menu__li"><a href="photos.html" class="link">photos</a></li>
-                <li class="menu__li"><a href="book.html" class="link">book</a></li>
-                <li class="menu__li"><a href="shop.html" class="link">shop</a></li>
-                <li class="menu__li"><a href="about.html" class="link">about</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navigation__menu">
+        <ul>
+            <li class="menu__item"><a href="films.html" class="link">films</a></li>
+            <li class="menu__item"><a href="photos.html" class="link">photos</a></li>
+            <li class="menu__item"><a href="book.html" class="link">book</a></li>
+            <li class="menu__item"><a href="shop.html" class="link">shop</a></li>
+            <li class="menu__item"><a href="about.html" class="link">about</a></li>
+        </ul>
+    </nav>
 
     <div class="content">
-        <!-- TODO: понятно, почему так, но если будешь писать что-то более сложное, все медиа нужно хранить за пределами проекта -->
-        <img src="./img/tarkovskiy.png" alt="Andrei Tarkovsky" class="photo">
+   <img src="https://3.downloader.disk.yandex.ru/preview/d485284763c8b0747c83f072fe3e15e69b0ba33a8bd4372dd82b6104f73d9938/inf/GlqG2dT-a1HeVXkonLi3acUcoc3oVTkxXGvCOAUdE2tNnauVX5hW_detocotZcPajKtB2iWZb5YE9jIbPzrIOQ%3D%3D?uid=1285736270&filename=tarkovskiy.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1285736270&tknv=v2&size=2880x1624"
+        alt="Andrei Tarkovsky"
+        class="photo">
     </div>
 </div>
 </body>

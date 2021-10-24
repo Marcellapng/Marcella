@@ -2,49 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>photos</title>
 </head>
 
 <header>
-    <h1 class="navigation__logo"><a href="index.html" class="link">george marcella</a></h1>
+    <h1 class="logo"><a href="index.html" class="link">george marcella</a></h1>
 </header>
 
 <body>
 <div class="canvas">
-    <div class="navigation">
-        <!-- <h1 class="navigation__logo"><a href="index.html" class="link">george marcella</a></h1> -->
         <nav class="navigation__menu">
             <ul>
-                <li class="menu__li"><a href="films.html" class="link">films</a></li>
-                <li class="menu__li"><a href="photos.html" class="link">photos</a></li>
-                <li class="menu__li"><a href="book.html" class="link">book</a></li>
-                <li class="menu__li"><a href="shop.html" class="link">shop</a></li>
-                <li class="menu__li"><a href="about.html" class="link">about</a></li>
+                <li class="menu__item"><a href="films.html" class="link">films</a></li>
+                <li class="menu__item"><a href="photos.html" class="link">photos</a></li>
+                <li class="menu__item"><a href="book.html" class="link">book</a></li>
+                <li class="menu__item"><a href="shop.html" class="link">shop</a></li>
+                <li class="menu__item"><a href="about.html" class="link">about</a></li>
             </ul>
         </nav>
-    </div>
 
     <div class="content">
         <div class="slider">
-            <img src="./img/katebefore.png" alt="Ekaterina Nemolyaeva" class="photo">
-            <img src="./img/time.png" alt="Still from the cinema" class="photo">
-            <img src="./img/kateafter.jpg" alt="Ekaterina Nemolyaeva" class="photo">
+                <img src="https://3.downloader.disk.yandex.ru/preview/a27956c866c93096543f9907c487d99186186626f87e32b461dcfb2eb5ae9c53/inf/OP0JaUKZXPP2ybZ__mt7fIakIfnKpmR1o9n0ykQbCjV-ty7eeRJfWNpQaKEPbWWinPEEX-r2qVkUiH_xY37vkA%3D%3D?uid=1285736270&filename=katebefore.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1285736270&tknv=v2&size=2880x1624"
+                     alt="Ekaterina Nemolyaeva"
+                     class="photo fade">
+                <img src="https://3.downloader.disk.yandex.ru/preview/e931609ed75533108b81d5e359734698332824a8f3f5abc54c812142d9cf7809/inf/VH7kgAimN1WvB0lin39zxlOuRmZ_tH3R43VXScZcGvxLbYnNC6MjQCJTrxHHuogrMIpD-vLryll0ayGAerwI3Q%3D%3D?uid=1285736270&filename=time.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1285736270&tknv=v2&size=2880x1624"
+                     alt="Still from the cinema"
+                     class="photo fade">
+                <img src="https://1.downloader.disk.yandex.ru/preview/39ccd6854ac0d2a9db5a1273dac8535b99992839e8269a08b58348b0bf234967/inf/nhTjgFJempeshQ6EGkDdf4FQo2flefAm1LIy1et0BGdgxuwKUZMQvc6o_VBn5I-vCtCRf9GmtG9vWsUDiqyvOA%3D%3D?uid=1285736270&filename=kateafter.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1285736270&tknv=v2&size=2880x1624"
+                     alt="Ekaterina Nemolyaeva"
+                     class="photo fade">
 
-            <!-- TODO: "Элемент <br> имеет единственную цель – создать разрыв линии в блоке текста" - MDN
-            здесь он не к месту, а лучше его вообще не использовать без особой надобности
-            тоже самое касается тега <hr> - он нужен только для разделения параграфов в тексте -->
-            </br>
+                <button
+                        class="slider__button"
+                        onclick="previousSlide()">
+                    &#8592;</button>
 
-            <!-- TODO: не уверен, что это хорошая идея:
-            1. ссылка должна оставаться ссылкой, а кнопка - кнопкой. Семантически правильно оставить стили только соответствующие тегу
-            2. как БЭМ микс это выглядит странно - обычно два блока на одном узле не миксуют -->
-            <a class="link button" onclick="previousSlide()">Back</a>
-            <a class="link button" onclick="nextSlide()">Next</a>
+                <button
+                        class="slider__button"
+                        onclick="nextSlide()">
+                    &#8594;</button>
         </div>
     </div>
 </div>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
