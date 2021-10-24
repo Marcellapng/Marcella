@@ -1,16 +1,53 @@
-/* TODO: для улучшения читаемости можно использовать SCSS
-наглядная вещь и с БЭМ сочетается отлично */
-
 @font-face {
-    font-family: "Bicyclette";
+    font-family: 'Bicyclette';
+    src: local('Bicyclette Regular'),
+    local('Bicyclette-Regular'),
+    url('/fonts/Bicyclette-Regular.woff') format('woff'),
+    url('/fonts/Bicyclette-Regular.ttf') format('ttf'),
+    url('/fonts/Bicyclette-Regular.eot') format('eot');
+    font-weight: normal;
 }
 
-/* TODO: в проектах побольше так лучше не делать */
+@font-face {
+    font-family: 'Bicyclette';
+    src: local('Bicyclette Bold'),
+    local('Bicyclette-Bold'),
+    url('/fonts/Bicyclette-Bold.woff') format('woff'),
+    url('/fonts/Bicyclette-Bold.ttf') format('ttf'),
+    url('/fonts/Bicyclette-Bold.eot') format('eot');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Bicyclette';
+    src: local('Bicyclette Light'),
+    local('Bicyclette-Light'),
+    url('/fonts/Bicyclette-Light.woff') format('woff'),
+    url('/fonts/Bicyclette-Light.ttf') format('ttf'),
+    url('/fonts/Bicyclette-Light.eot') format('eot');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Bicyclette';
+    src: local('Bicyclette Italic'),
+    local('Bicyclette-Italic'),
+    url('/fonts/Bicyclette-Italic.woff') format('woff'),
+    url('/fonts/Bicyclette-Italic.ttf') format('ttf'),
+    url('/fonts/Bicyclette-Italic.eot') format('eot');
+    font-style: italic;
+}
+
 body {
-    font-family: Bicyclette;
+    margin: 0;
+    font-family: "Bicyclette", sans-serif;
     font-weight: normal;
     background-color: #facf7a;
     color: red;
+}
+
+.title {
+    margin: 0 0 2%;
 }
 
 .canvas {
@@ -19,56 +56,77 @@ body {
     align-items: stretch;
 }
 
-/* TODO: старайся не оставлять пустые файлы и сущности в проекте
-если это напоминание самому себе, пиши "// TODO:" */
-.navigation {
-
-}
-
-.navigation__logo {
+.logo {
+    font-weight: bold;
     font-size: 24px;
-    font-weight: normal;
-    padding-left: 43px;
-    padding-top: 26px;
+    padding: 26px 0 0 38px;
+    margin: 0;
 }
 
 .navigation__menu {
-    font-size: 16px;
-    line-height: 1.3;
-    padding-top: 10px;
-    padding-left: 5px;
+    font-weight: bold;
+    margin: 0;
+    min-width: 38%;
 }
 
-/* TODO: не всегда элементами меню могут быть <li>
-я бы назвал .menu__item */
-.menu__li {
+.menu__item {
     list-style: none;
     padding-top: 10px;
 }
 
 .content {
     flex-grow: 1;
+    margin: 5% auto 0;
 }
 
+/*film*/
+.frame_item {
+    margin-bottom: 2%;
+}
+
+.description {
+    max-width: 685px;
+    margin: 0 0 8% 0;
+    line-height: 1.3;
+}
+
+/*slider*/
 .photo {
     width: 654px;
     height: 443px;
     display: block;
-
-    /* TODO: паддинг тут не нужен, смотри изменения в файле photos.html (с 9й строчки) */
-    padding-top: 10%;
-
-    /* TODO: в блоках по БЭМ не должно быть внешней геометрии
-    margin - это внешний отступ, влияющий на размер
-    если ты захочешь использовать этот блок в другом месте, могут возникнуть трудности с его размещением */
-    margin: 0 auto;
     object-fit: cover;
     object-position: top;
 }
 
+.slider {
+}
+
+.slider {
+    background-color: rgb(89, 112, 12);
+    width: 654px;
+    height: 443px;
+    text-align: center;
+}
+
+.slider__button {
+    background-color: #fff;
+    min-width: 60px;
+    min-height: 35px;
+    border-radius: 40px;
+    border: none;
+    margin: 10px 5px;
+    padding: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.slider__button:hover {
+    background-color: rgb(89, 112, 12);
+    color: white;
+}
+
 .link {
-    /* TODO: добавь сюда эту строчку, посмотри, что получится */
-    /* cursor: pointer; */
     text-decoration: none;
     color: red;
 }
@@ -78,49 +136,29 @@ body {
     transition: color .2s;
 }
 
-
-/* TODO: обрати внимание на нейминг - где-то film / где-то cinema 
-похоже на придирку, но когда проект разрастается, css классы и компоненты с разными названиями
-воспринимаются как разные сущности
-даже если под ними подразумеваются одно и тоже, как здесь: */
-
-/*Film*/
-
-.cinema {
-    /* padding: 100px; */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: 1s;
 }
 
-.cinema__frame {
-    width: 700px;
-    height: 405px;
-    /*border: solid 5px red;*/
-    background-color: black;
-    display: block;
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
 
-    /* TODO: у тебя ведь не настроен линтер, так?
-    два свойства подряд описывают одно и тоже 
-    И еще - ты спокойно можешь вывести это в блок в виде padding: 100px
-    таким образом ты не нарушишь БЭМ и тебе не придется каждому элементу писать отступы*/
-    margin: 100px auto;
-    margin-bottom: 1.5em;
+    to{
+        opacity: 1;
+    }
 }
 
-/* TODO: description ? */
-.cinema__dicription {
-    width: 685px;
-    margin: 0 auto;
-    line-height: 1.3;
+.about__photo {
+    width: 350px;
+    height: 350px;
+    box-shadow: 12px 12px 1px 1px red;
+    transition: .7s;
 }
 
-/*Photo*/
-.slider {
-    text-align: center;
-}
-
-.photo {
-    display: none;
-}
-
-.button {
-    margin: 0 8px;
+.about__photo:hover {
+    box-shadow: -12px -12px 1px 1px rgb(89, 112, 12);
 }
