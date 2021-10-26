@@ -35,6 +35,26 @@
                 src="https://1.downloader.disk.yandex.ru/preview/c35a653523b3e4e17880c62a979339e6ceb93e802c4821971382011431407d9c/inf/QNh7nvbAWPw4h_0ZW6S3OB8bJTY8AIP3ijv4yw1SsFHxLA6jdPcUS0UaeNfjS8Q5Ed5iNWTY0JQUMXxxlKM1rQ%3D%3D?uid=1285736270&filename=about.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1285736270&tknv=v2&size=2880x1624"
                 alt="about"
                 class="about__photo">
+
+        <!-- Создаём форму и указываем её обработчик и метод -->
+        <form action="http://f0593805.xsph.ru/post.php" method="post" name="form">
+            <!-- Поле ввода имени -->
+            <input name="name" type="text" placeholder="Ваше имя" />
+            <br>
+            <!-- Поле ввода почты  -->
+            <input name="email" type="text" placeholder="Ваша почта" />
+            <br>
+            <!-- Поле ввода для темы сообщения -->
+            <input size="30" name="header" type="text" placeholder="Тема" />
+            <br>
+            <!-- Текстовое поле для самого сообщения -->
+            <textarea cols="32" name="message" rows="5"> Текст сообщения
+  </textarea>
+            <br>
+            <!-- Кнопка с надписью «Отправить», которая запускает обработчик формы -->
+            <input type="submit" value="Отправить" />
+        </form>
+
     </div>
 </div>
 </body>
